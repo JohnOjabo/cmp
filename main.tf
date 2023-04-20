@@ -35,7 +35,7 @@ resource "aws_iam_role" "aws_access" {
   managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess"]
 }
 
-resource "aws_iam_instance_profile" "instance_profiles" {
+resource "aws_iam_instance_profile" "instance_profile" {
   name = "${var.prefix}-profile"
   role = aws_iam_role.aws_access.name
 }
